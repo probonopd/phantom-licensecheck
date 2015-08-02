@@ -2,6 +2,7 @@ language: c
 
 sudo: true
 script: 
+- sudo apt-get install p7zip-full
 - wget https://github.com/devttys0/binwalk/archive/master.zip
 - unzip master.zip
 - sudo ./binwalk-master/deps.sh < echo "y"
