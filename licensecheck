@@ -25,13 +25,11 @@ ls -lh *extracted
 file *extracted/*
 
 # Print strings inside all ELF files
-FILES=$(find  *extracted -name *.elf)
-for f in $FILES ; do
+find  *extracted -name *.elf -print0 | while IFS= read -r -d $'\0' f; do 
   echo ""
   echo "##########################################"
   echo ""
-	echo "Strings of file $f"
-	echo ""
-	strings "$f"
+  echo "Strings of file $f"
+  echo ""
+  strings "$f"
 done
- 
