@@ -2,7 +2,7 @@
 
 # Install dependencies
 sudo apt-get update
-sudo apt-get -y install  unrar unrar-free lha mtd-utils zlib1g-dev liblzma-dev ncompress gzip bzip2 tar arj p7zip p7zip-full
+sudo apt-get -y install python-requests unrar unrar-free lha mtd-utils zlib1g-dev liblzma-dev ncompress gzip bzip2 tar arj p7zip p7zip-full
 # cramfsprogs cramfsswap
 
 # Install binwalk
