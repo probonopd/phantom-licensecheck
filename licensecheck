@@ -25,7 +25,7 @@ ls -lh *extracted
 file *extracted/*
 
 # Print strings inside all ELF files
-FILES=$(find find  *extracted -name *.elf)
+FILES=$(find  *extracted -name *.elf)
 for f in "$FILES" ; do
   echo ""
   echo "##########################################"
