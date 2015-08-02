@@ -14,3 +14,4 @@ script:
 - binwalk -Mre ./P3*.bin
 - ls -lh *extracted
 - file *extracted/*
+- find *extracted/cramfs-root
