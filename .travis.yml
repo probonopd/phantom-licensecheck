@@ -10,6 +10,6 @@ script:
 - (cd binwalk-master && sudo python setup.py uninstall && sudo python setup.py install)
 - wget "http://download.dji-innovations.com/downloads/phantom_3/en/Phantom_3_Advanced_Firmware_v1.2.8_en.zip"
 - unzip Phantom*.zip
-- alias 7z='7z -mmt=off '
+- alias 7z='7z -mx -mmt2'
 - binwalk -Mre ./P3*.bin
 - ls -lh *extracted
