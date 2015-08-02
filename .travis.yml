@@ -8,6 +8,5 @@ script:
 - (cd binwalk-master && sudo python setup.py uninstall && sudo python setup.py install)
 - wget "http://download.dji-innovations.com/downloads/phantom_3/en/Phantom_3_Advanced_Firmware_v1.2.8_en.zip"
 - unzip Phantom*.zip
-- cd Phantom_*_en
 - binwalk -Mre ./P3X_*.bin
 - ls -lh *extracted
