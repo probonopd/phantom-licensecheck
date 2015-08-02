@@ -4,7 +4,7 @@ sudo: true
 script: 
 - wget https://github.com/devttys0/binwalk/archive/master.zip
 - unzip master.zip
-- sudo ./binwalk-master/deps.sh
+- sudo ./binwalk-master/deps.sh < echo "y"
 - (cd binwalk-master && sudo python setup.py uninstall && sudo python setup.py install)
 - wget "http://download.dji-innovations.com/downloads/phantom_3/en/Phantom_3_Advanced_Firmware_v1.2.8_en.zip"
 - unzip Phantom*.zip
