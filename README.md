@@ -1,6 +1,6 @@
 # phantom-licensecheck
 
-Check the open source licenses used in DJI Phantom 3 firmware, if any
+Check the open source licenses used in [DJI Phantom 3](http://www.dji.com/product/phantom-3/download) firmware, if any
 
 # Motivation
 
