@@ -5,7 +5,7 @@ script:
 - sudo apt-get install p7zip-full
 - wget https://github.com/devttys0/binwalk/archive/master.zip
 - unzip master.zip
-- sudo ./binwalk-master/deps.sh < echo "y"
+- sudo ./binwalk-master/deps.sh < yes
 - (cd binwalk-master && sudo python setup.py uninstall && sudo python setup.py install)
 - wget "http://download.dji-innovations.com/downloads/phantom_3/en/Phantom_3_Advanced_Firmware_v1.2.8_en.zip"
 - unzip Phantom*.zip
