@@ -6,11 +6,11 @@ script:
 - sudo apt-get -y install cramfsprogs unrar unrar-free lha mtd-utils zlib1g-dev liblzma-dev ncompress gzip bzip2 tar arj p7zip p7zip-full
 - wget https://github.com/devttys0/binwalk/archive/master.zip
 - unzip master.zip
-- # sudo ./binwalk-master/deps.sh < yes
+- # In order not to get killed due to RAM usage
+- sed -i -e  's|7z e|7z -mx -mmt2 e|g' ./binwalk-master/src/binwalk/config/extract.conf
 - (cd binwalk-master && sudo python setup.py uninstall && sudo python setup.py install)
 - wget "http://download.dji-innovations.com/downloads/phantom_3/en/Phantom_3_Advanced_Firmware_v1.2.8_en.zip"
 - unzip Phantom*.zip
-- alias 7z='7z -mx -mmt2'
 - binwalk -Mre ./P3*.bin
 - ls -lh *extracted
 - file *extracted/*
