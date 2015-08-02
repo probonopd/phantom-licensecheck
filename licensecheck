@@ -33,3 +33,8 @@ find  *extracted -name *.elf -or -name *.txt -or -name *.xml -or -name *.key -pr
   echo "" >> findings.txt
   strings "$f" >> findings.txt
 done
+
+# Upload the findings
+wget https://raw.githubusercontent.com/probonopd/travis2github/master/travis2github.py
+wget https://raw.githubusercontent.com/probonopd/travis2github/master/magic.py
+python travis2github.py ./findings.txt
