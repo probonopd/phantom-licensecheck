@@ -4,7 +4,11 @@ Check the open source licenses used in [DJI Phantom 3](http://www.dji.com/produc
 
 # Motivation
 
-Rumors are that OpenWrt is used in the Phantom firmware. If so, parts of the Phantom firmware would have to be provided by DJI in soure form. This project is to check the Phantom firmware for any open source code that might have such requirements.
+This shows that Linux and other GPL code is used in the Phantom firmware. Hence, parts of the Phantom firmware would have to be provided by DJI in soure form, however I could not locate the source code downloads on the DJI site. This project is to check the Phantom firmware for any open source code that might have such requirements.
+
+# Results
+
+See [findings.txt](https://github.com/probonopd/phantom-licensecheck/releases/download/travis/findings.txt) for a dump of strings found in relevant parts of the firmware. This shows that Linux and other GPL code is used in the Phantom firmware.
 
 # Hello world
 
