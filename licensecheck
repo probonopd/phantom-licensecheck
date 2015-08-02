@@ -1,0 +1,37 @@
+#/!bin/bash
+
+# Install dependencies
+sudo apt-get update
+sudo apt-get -y install cramfsprogs unrar unrar-free lha mtd-utils zlib1g-dev liblzma-dev ncompress gzip bzip2 tar arj p7zip p7zip-full
+
+# Install binwalk
+wget https://github.com/devttys0/binwalk/archive/master.zip
+unzip master.zip
+
+# In order not to get killed due to RAM usage
+sed -i -e  's|7z e|7z -mx -mmt2 e|g' ./binwalk-master/src/binwalk/config/extract.conf
+
+(cd binwalk-master && sudo python setup.py uninstall && sudo python setup.py install)
+
+# Get and extract firmware
+wget "http://download.dji-innovations.com/downloads/phantom_3/en/Phantom_3_Advanced_Firmware_v1.2.8_en.zip"
+unzip Phantom*.zip
+
+# Examine firmware with binwalk
+binwalk -Mre ./P3*.bin
+
+# Check what we got
+ls -lh *extracted
+file *extracted/*
+
+# Print strings inside all ELF files
+FILES=$(find find  *extracted -name *.elf)
+for f in "$FILES" ; do
+  echo ""
+  echo "##########################################"
+  echo ""
+	echo "Strings of file $f"
+	echo ""
+	strings "$f"
+done
+ 
