@@ -26,22 +26,15 @@ ls -lh *extracted
 file *extracted/*
 
 # Print strings inside all ELF files
-find  *extracted -name *.elf -print0 | while IFS= read -r -d $'\0' f; do 
+FILES=$(find  *extracted -name *.elf -or -name *.key)
+for f in $FILES ; do
   echo "" >> findings.txt
   echo "##########################################" >> findings.txt
   echo "" >> findings.txt
-  echo "Strings of file $f" >> findings.txt
-  echo "" >> findings.txt
-  strings "$f" >> findings.txt
+	echo "Strings of file $f" >> findings.txt
+	echo "" >> findings.txt
+	strings "$f" >> findings.txt
 done
-
-# Contents of the cramfs filesystem
-# echo "" >> findings.txt
-# echo "##########################################" >> findings.txt
-# echo "" >> findings.txt
-# echo "Contents of the cramfs filesystem" >> findings.txt
-# echo "" >> findings.txt
-# find *extracted/cramfs-root >> findings.txt
 
 # Upload the findings
 wget https://raw.githubusercontent.com/probonopd/travis2github/master/travis2github.py
