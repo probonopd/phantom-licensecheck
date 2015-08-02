@@ -2,7 +2,8 @@
 
 # Install dependencies
 sudo apt-get update
-sudo apt-get -y install cramfsprogs cramfsswap unrar unrar-free lha mtd-utils zlib1g-dev liblzma-dev ncompress gzip bzip2 tar arj p7zip p7zip-full
+sudo apt-get -y install  unrar unrar-free lha mtd-utils zlib1g-dev liblzma-dev ncompress gzip bzip2 tar arj p7zip p7zip-full
+# cramfsprogs cramfsswap
 
 # Install binwalk
 wget https://github.com/devttys0/binwalk/archive/master.zip
@@ -33,6 +34,14 @@ find  *extracted -name *.elf -or -name *.txt -or -name *.xml -or -name *.key -pr
   echo "" >> findings.txt
   strings "$f" >> findings.txt
 done
+
+# Contents of the cramfs filesystem
+# echo "" >> findings.txt
+# echo "##########################################" >> findings.txt
+# echo "" >> findings.txt
+# echo "Contents of the cramfs filesystem" >> findings.txt
+# echo "" >> findings.txt
+# find *extracted/cramfs-root >> findings.txt
 
 # Upload the findings
 wget https://raw.githubusercontent.com/probonopd/travis2github/master/travis2github.py
