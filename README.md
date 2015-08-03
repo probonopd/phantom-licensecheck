@@ -10,6 +10,10 @@ This shows that Linux and other GPL code is used in the Phantom firmware. Hence,
 
 See [findings.txt](https://github.com/probonopd/phantom-licensecheck/releases/download/travis/findings.txt) for a dump of strings found in relevant parts of the firmware. This shows that Linux and other GPL code is used in the Phantom firmware.
 
+As we can see below, the firmware contains references to Ambarella. According to [this](ttp://www.investopedia.com/stock-analysis/061115/4-things-ambarella-management-wants-you-know-amba.aspx) article, the Ambarella CEO noted that DJI "brought to market its Phantom 3 drones, both powered by Ambarella's A9 camera systems-on-chip". This fits to the fact that strings like `autobuild_A9_Ambalink_AR6004/ambalink_sdk/host/usr/arm-buildroot-linux-gnueabi` are found in the Phantom 3 Advanced firmware. According to the [Product Brief](http://www.ambarella.com/uploads/docs/A9%20Product%20Brief.pdf), the Ambarella A9 has two ARM® CORTEX-A9 and one ARM® 11 cores and can do 4K.
+
+As we can also see below, the firmware contains references to ThreadX, a proprietary Real Time Operating System (RTOS). Most interestingly, a dissection of the firmware shows many signs of Linux and Linux kernel drivers, which suggests that GPL code is most likely included in the Phantom 3 firmware.
+
 # Hello world
 
 ```
