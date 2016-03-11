@@ -1,10 +1,22 @@
 # phantom-licensecheck
 
-Check the open source licenses used in [DJI Phantom 3](http://www.dji.com/product/phantom-3/download) firmware, if any
+Check the open source licenses used in [DJI Phantom 3](http://www.dji.com/product/phantom-3/download) firmware, if any. In Order to do this, it is necessary to get a better insight into the structure of DJI Phantom firmware files.
 
 # Motivation
 
 This shows that Linux and other GPL code is used in the Phantom firmware. Hence, parts of the Phantom firmware would have to be provided by DJI in soure form, however I could not locate the source code downloads on the DJI site. This project is to check the Phantom firmware for any open source code that might have such requirements.
+
+# Firmware structure
+
+The .bin files provided by DJI for firmware update are in fact firmware packages files. These packages consist of file header informations, a seek table and a varying number of firmware code modules.
+
+# Roadmap
+
+  - Structure of package file header and seek table have to be found.
+  - Firmware code modules have to be extracted separately.
+  - Compressed code modules have to be unpacked.
+  - Each code module has to be checked for fingerprints of open source licensed code.
+  - DJI can than be asked to disclose specific parts of the code, which take advantage of open source licensed material.
 
 # Results
 
