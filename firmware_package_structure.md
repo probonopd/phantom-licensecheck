@@ -2,7 +2,26 @@
 
 ### Filenames and drone types
 
+Firmware package files can by found at the website of DJI, at the support page of each Phantom 3 drone. Only some recent firmware files are online, there is not yet a repository for older firmware files. 
+
+DJI uses the format `<model code>_FW_V<version>.<subversion>.<subversion2>.bin` for firmware package files and only such files are used for update. On some occasion, beta files are marked `..._beta.bin`. , 
+
+Firmware package files analyzed so far are:
+
+* P3X_FW_V01.07.0048_beta.bin (0.8MB)
+* P3X_FW_V01.06.0040.bin (65MB)
+* P3X_FW_V01.05.0030.bin (65MB)
+* P3X_FW_V01.03.0020.bin (95MB)
+* P3XW_FW_V01.03.0021.bin (66MB)
+* P3S_FW_V01.07.0048_beta.bin (0.8MB)
+* P3S_FW_V01.06.0040.bin (62MB)
+* P3S_FW_V01.05.0030.bin (62MB)
+* P3S_FW_V01.03.0020.bin (92MB)
+* P3C_FW_V01.04.0051.bin (66MB)
+
 ### General structure
+
+Every firmware package file consists of a file header, a seek table with one entry per firmware module, a checksum and finaly a number of firmware modules corresponding to different sub systems of the drone. 
 
 ### Header
 
@@ -26,7 +45,7 @@ Furthermore, there is a 2 byte checksum after the last seek table entry. The off
 074 - 075 + off	checksum of header + seek table, typ unknown
 ```
 
-### Seek Table
+### Seek table
 
 The offset value has to be calculated as 52 * 'row number'. 
 
