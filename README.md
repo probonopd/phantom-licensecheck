@@ -10,13 +10,15 @@ This shows that Linux and other GPL code is used in the Phantom firmware. Hence,
 
 The .bin files provided by DJI for firmware update are in fact firmware packages files. These packages consist of file header informations, a seek table and a varying number of firmware code modules.
 
+A detailed analysis of the firmware package file structure can be found here (https://github.com/dji3firmware/phantom-licensecheck/blob/patch-1/firmware_package_structure.md)
+
 # Roadmap
 
-  - Structure of package file header and seek table have to be found.
-  - Firmware code modules have to be extracted separately.
-  - Compressed code modules have to be unpacked.
-  - Each code module has to be checked for fingerprints of open source licensed code.
-  - DJI can than be asked to disclose specific parts of the code, which take advantage of open source licensed material.
+- [ ] Structure of package file header and seek table have to be found.
+- [ ] Firmware code modules have to be extracted separately.
+- [ ] Compressed code modules have to be unpacked.
+- [ ] Each code module has to be checked for fingerprints of open source licensed code.
+- [ ] DJI can than be asked to disclose specific parts of the code, which take advantage of open source licensed material.
 
 # Results
 
