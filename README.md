@@ -12,6 +12,8 @@ The .bin files provided by DJI for firmware update are in fact firmware packages
 
 A detailed analysis of the firmware package file structure can be found here [firmware_package_structure.md](https://github.com/probonopd/phantom-licensecheck/firmware_package_structure.md)
 
+A detailed analysis of the firmware modules can be found here [dji_firmware_modules.md](https://github.com/probonopd/phantom-licensecheck/dji_firmware_modules.md)
+
 # Roadmap
 
 - [ ] Structure of package file header and seek table have to be found.
