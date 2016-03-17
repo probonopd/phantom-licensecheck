@@ -74,4 +74,4 @@ The different firmware module types are described in this document (http://www.g
 
 ### Tools
 
-* A simple python script is included to split every firmware package file into separate firmware modules. (http://www.github.com/). Syntax: `dji_split.py <filename.bin>`
+* A simple python script is included to split every firmware package file into separate firmware modules. Syntax: `dji_split.py <filename.bin>`
