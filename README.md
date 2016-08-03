@@ -4,7 +4,7 @@ Check the open source licenses used in [DJI Phantom 3](http://www.dji.com/produc
 
 # Motivation
 
-This shows that Linux and other GPL code is used in the Phantom firmware. Hence, parts of the Phantom firmware would have to be provided by DJI in soure form, however I could not locate the source code downloads on the DJI site. This project is to check the Phantom firmware for any open source code that might have such requirements.
+This shows that Linux and other GPL code is used in the Phantom firmware. Hence, parts of the Phantom firmware would have to be provided by DJI in source form, however I could not locate the source code downloads on the DJI site. This project is to check the Phantom firmware for any open source code that might have such requirements.
 
 # Firmware structure
 
